@@ -12,6 +12,9 @@ namespace WindowsFormsApp1
 {
     public partial class MainForm : Form
     {
+        int count = 0;
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -31,6 +34,24 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Мои Утилиты. Содержат набор простеньких приятных учебных программ. Автор: U_Drunk",
                 "О программе");
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            count++;
+            lblCount.Text = count.ToString();
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+            count--;
+            lblCount.Text = count.ToString();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            count = 0;
+            lblCount.Text = count.ToString();
         }
     }
 }
