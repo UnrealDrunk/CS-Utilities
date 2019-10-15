@@ -13,11 +13,13 @@ namespace WindowsFormsApp1
     public partial class MainForm : Form
     {
         int count = 0;
+        Random rnd;
 
 
         public MainForm()
         {
             InitializeComponent();
+            rnd = new Random();
         }
 
         private void файлToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +54,13 @@ namespace WindowsFormsApp1
         {
             count = 0;
             lblCount.Text = count.ToString();
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int n;
+            n = rnd.Next((int)numericUpDown1.Value, (int)numericUpDown2.Value);
+            lblRandom.Text = n.ToString();
         }
     }
 }
