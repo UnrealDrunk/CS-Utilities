@@ -61,6 +61,35 @@ namespace WindowsFormsApp1
             int n;
             n = rnd.Next((int)numericUpDown1.Value, (int)numericUpDown2.Value);
             lblRandom.Text = n.ToString();
+
+            if(cbRandom.Checked)
+            {
+                int i =0;
+                while (tbRandom.Text.IndexOf(n.ToString()) != -1)
+                {
+                    n = rnd.Next((int)numericUpDown1.Value, (int)numericUpDown2.Value);
+                    i++;
+                    if (i > numericUpDown2.Value - numericUpDown1.Value) break;
+                }
+      
+                if(i <= numericUpDown2.Value - numericUpDown1.Value)
+                    tbRandom.AppendText(n + "\t");
+            }
+            else
+                tbRandom.AppendText(n + "\t");
+
+
+
+        }
+
+        private void btnRandomClear_Click(object sender, EventArgs e)
+        {
+            tbRandom.Clear();
+        }
+
+        private void btnRandomCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbRandom.Text);
         }
     }
 }

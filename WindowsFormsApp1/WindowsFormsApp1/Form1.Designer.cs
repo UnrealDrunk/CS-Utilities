@@ -46,6 +46,10 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.tbRandom = new System.Windows.Forms.TextBox();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.btnRandomCopy = new System.Windows.Forms.Button();
+            this.cbRandom = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -99,8 +103,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
@@ -167,6 +171,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbRandom);
+            this.tabPage2.Controls.Add(this.btnRandomCopy);
+            this.tabPage2.Controls.Add(this.btnRandomClear);
+            this.tabPage2.Controls.Add(this.tbRandom);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.numericUpDown2);
@@ -196,9 +204,9 @@
             this.lblRandom.AutoSize = true;
             this.lblRandom.Location = new System.Drawing.Point(372, 142);
             this.lblRandom.Name = "lblRandom";
-            this.lblRandom.Size = new System.Drawing.Size(75, 17);
+            this.lblRandom.Size = new System.Drawing.Size(16, 17);
             this.lblRandom.TabIndex = 1;
-            this.lblRandom.Text = "lblRandom";
+            this.lblRandom.Text = "0";
             // 
             // numericUpDown1
             // 
@@ -241,6 +249,45 @@
             this.label3.Size = new System.Drawing.Size(27, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "До";
+            // 
+            // tbRandom
+            // 
+            this.tbRandom.Location = new System.Drawing.Point(375, 177);
+            this.tbRandom.Multiline = true;
+            this.tbRandom.Name = "tbRandom";
+            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbRandom.Size = new System.Drawing.Size(72, 185);
+            this.tbRandom.TabIndex = 6;
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Location = new System.Drawing.Point(38, 192);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(119, 23);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            // 
+            // btnRandomCopy
+            // 
+            this.btnRandomCopy.Location = new System.Drawing.Point(38, 254);
+            this.btnRandomCopy.Name = "btnRandomCopy";
+            this.btnRandomCopy.Size = new System.Drawing.Size(119, 23);
+            this.btnRandomCopy.TabIndex = 8;
+            this.btnRandomCopy.Text = "Копировать";
+            this.btnRandomCopy.UseVisualStyleBackColor = true;
+            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(38, 314);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(135, 21);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -286,6 +333,10 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblRandom;
         private System.Windows.Forms.Button btnRandom;
+        private System.Windows.Forms.TextBox tbRandom;
+        private System.Windows.Forms.Button btnRandomClear;
+        private System.Windows.Forms.Button btnRandomCopy;
+        private System.Windows.Forms.CheckBox cbRandom;
     }
 }
 
